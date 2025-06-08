@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - CAPW</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portfolio">
+            <h1>Simuladores Disponíveis</h1>
+            <p class="intro">Escolha o tipo de financiamento que você deseja simular:</p>
+            
+            <div class="simulators">
+                <div class="simulator-card" id="auto-finance">
+                    <h2>Financiamento de Veículos</h2>
+                    <p>Simule o financiamento do seu carro, moto ou outro veículo com as melhores taxas do mercado.</p>
+                    <div class="simulator-form">
+                        <h3>Simulador de Financiamento Veicular</h3>
+                        <form id="auto-form">
+                            <div class="form-group">
+                                <label for="auto-value">Valor do veículo (R$):</label>
+                                <input type="number" id="auto-value" min="5000" step="1000" value="50000">
+                            </div>
+                            <div class="form-group">
+                                <label for="auto-entry">Valor de entrada (R$):</label>
+                                <input type="number" id="auto-entry" min="0" step="1000" value="10000">
+                            </div>
+                            <div class="form-group">
+                                <label for="auto-months">Prazo (meses):</label>
+                                <input type="range" id="auto-months" min="12" max="72" value="48">
+                                <span id="auto-months-value">48 meses</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="auto-rate">Taxa de juros (% a.a.):</label>
+                                <input type="number" id="auto-rate" min="1" max="30" step="0.1" value="12.5">
+                            </div>
+                            <button type="button" class="btn-primary" onclick="calculateAutoFinance()">Calcular</button>
+                        </form>
+                        <div id="auto-result" class="result-box">
+                            <p>Preencha os dados e clique em calcular para ver o resultado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulator-card" id="home-finance">
+                    <h2>Financiamento Imobiliário</h2>
+                    <p>Simule o financiamento da sua casa ou apartamento com as melhores condições.</p>
+                    <div class="simulator-form">
+                        <h3>Simulador de Financiamento Imobiliário</h3>
+                        <form id="home-form">
+                            <div class="form-group">
+                                <label for="home-value">Valor do imóvel (R$):</label>
+                                <input type="number" id="home-value" min="50000" step="10000" value="300000">
+                            </div>
+                            <div class="form-group">
+                                <label for="home-entry">Valor de entrada (R$):</label>
+                                <input type="number" id="home-entry" min="0" step="10000" value="60000">
+                            </div>
+                            <div class="form-group">
+                                <label for="home-months">Prazo (meses):</label>
+                                <input type="range" id="home-months" min="60" max="420" step="12" value="240">
+                                <span id="home-months-value">240 meses</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="home-rate">Taxa de juros (% a.a.):</label>
+                                <input type="number" id="home-rate" min="1" max="15" step="0.1" value="9.5">
+                            </div>
+                            <button type="button" class="btn-primary" onclick="calculateHomeFinance()">Calcular</button>
+                        </form>
+                        <div id="home-result" class="result-box">
+                            <p>Preencha os dados e clique em calcular para ver o resultado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulator-card" id="personal-loan">
+                    <h2>Empréstimo Pessoal</h2>
+                    <p>Simule um empréstimo pessoal para realizar seus projetos e sonhos.</p>
+                    <div class="simulator-form">
+                        <h3>Simulador de Empréstimo Pessoal</h3>
+                        <form id="loan-form">
+                            <div class="form-group">
+                                <label for="loan-value">Valor desejado (R$):</label>
+                                <input type="number" id="loan-value" min="1000" step="1000" value="10000">
+                            </div>
+                            <div class="form-group">
+                                <label for="loan-months">Prazo (meses):</label>
+                                <input type="range" id="loan-months" min="3" max="72" value="24">
+                                <span id="loan-months-value">24 meses</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="loan-rate">Taxa de juros (% a.m.):</label>
+                                <input type="number" id="loan-rate" min="0.5" max="10" step="0.1" value="2.5">
+                            </div>
+                            <button type="button" class="btn-primary" onclick="calculatePersonalLoan()">Calcular</button>
+                        </form>
+                        <div id="loan-result" class="result-box">
+                            <p>Preencha os dados e clique em calcular para ver o resultado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CAPW. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
