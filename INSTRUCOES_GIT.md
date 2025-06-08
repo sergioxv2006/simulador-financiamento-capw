@@ -1,4 +1,4 @@
-# Instruções para Git e GitHub - Projeto CAPW
+# Instruções para Git e GitHub
 
 ## Passo a Passo para Configurar o Git e GitHub
 
